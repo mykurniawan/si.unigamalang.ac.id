@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deskripsi Mata Kuliah</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            padding: 30px 0 10px 0;
+            color: #042ca4;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .semester {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .semester h2 {
+            margin-top: 0;
+            color: #042ca4;
+            text-align: center;
+            border-bottom: 2px solid #042ca4;
+            padding-bottom: 8px;
+        }
+
+        .course {
+            background: #f0f3ff;
+            border: 1px solid #d6dcff;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .course:hover {
+            background: #e4e9ff;
+        }
+
+        .arrow {
+            color: #042ca4;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotate {
+            transform: rotate(180deg);
+        }
+
+        .content {
+            background: white;
+            padding: 16px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: -8px 0 10px 0;
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .content b {
+            color: #042ca4;
+        }
+
+        /* Tombol scroll ke atas */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #042ca4;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .scroll-top:hover {
+            background: #021b73;
+        }
+
+        /* Responsif untuk tablet */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                /* jadi 1 kolom */
+                padding: 10px;
+            }
+
+            .semester {
+                padding: 15px;
+            }
+
+            .course {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        /* Responsif untuk HP kecil */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .course {
+                font-size: 13px;
+                flex-direction: column;
+                /* biar teks & panah turun ke bawah */
+                align-items: flex-start;
+            }
+
+            .arrow {
+                margin-top: 5px;
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Alur Matakuliah Sistem Informasi <br> Kurikulum 2025</h1>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXxl7FhSN7HvuOcINvlVlUASptYzClT-fNlDK15VqnQqoz6PhasNMPcsCf5156quzrCVuYdHO4LAHtMbp22BASryfbOz-aoeX0EjbSIpZlUZS4BELzziYUTyajd-hHpbaRay6fiK6e8wvFOckRG1clW0hDNZvuARZMDoMHkLPRwSDgZMH5dvJm69JonrD7/s16000/Entity%20Relationship%20Diagram%20Team%20Whiteboard%20(2).png"
+        alt="" width="100%" style="display:block; margin:auto;">
+
+    <h1>Deskripsi Mata Kuliah</h1>
+
+    <div class="grid">
+
+        <!-- Semester 1 -->
+        <div class="semester">
+            <h2>Semester 1</h2>
+            <div class="course">Algoritma I <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi lengkap Algoritma I...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Bahasa Inggris <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Bahasa Inggris...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 4</p>
+            </div>
+
+            <div class="course">Matriks dan Aljabar Linier <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Matriks dan Aljabar Linier...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pengantar Teknologi Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pengantar TI...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Pengetahuan Bisnis dan Perusahaan <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pengetahuan Bisnis dan Perusahaan ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Perangkat Lunak Produktivitas <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perangkat Lunak Produktivitas ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Perkenalan Pemrograman <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perkenalan Pemrograman ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Perkenalan Perancangan Webpage <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perkenalan Perancangan Webpage ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+        </div>
+
+        <!-- Semester 2 -->
+        <div class="semester">
+            <h2>Semester 2</h2>
+            <div class="course">Algoritma II <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Algoritma II...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Konsep Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Konsep Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Matematika Dasar <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Matematika Dasar...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pemrograman Berbasis Obyek <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Berbasis Obyek...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pemrograman Visual <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Visual...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pendidikan Kewarganegaraan <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pendidikan Kewarganegaraan ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pengantar Manajemen <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pengantar Manajemen ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Perkenalan Basis Data <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perkenalan Basis Data ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+        </div>
+
+        <!-- Semester 3 -->
+        <div class="semester">
+            <h2>Semester 3</h2>
+            <div class="course">Akuntansi I <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Akuntansi I...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Analisis Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Analisis Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Manajemen Basis Data I <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Basis Data I...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Pemrograman Berbasis Obyek Lanjut <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Berbasis Obyek Lanjut...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pemrograman Internet <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Internet...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pemrograman Visual Lanjut <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Visual Lanjut...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Pendidikan Pancasila <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pendidikan Pancasila...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Tugas Pengembangan Solusi I <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Tugas Pengembangan Solusi I...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 1</p>
+            </div>
+        </div>
+
+        <!-- Semester 4 -->
+        <div class="semester">
+            <h2>Semester 4</h2>
+            <div class="course">Akuntansi II <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Akuntansi II...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Analisis Proses Bisnis <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Analisis Proses Bisnis...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Jaringan Komputer <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Jaringan Komputer...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Manajemen Basis Data II <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Basis Data II...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Pemrograman Internet Lanjut <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Internet Lanjut...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Perancangan Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perancangan Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Praktek Sistem Operasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Praktek Sistem Operasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 1</p>
+            </div>
+            <div class="course">Tugas Pengembangan Solusi II <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Tugas Pengembangan Solusi II...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 1</p>
+            </div>
+        </div>
+
+        <!-- Semester 5 -->
+        <div class="semester">
+            <h2>Semester 5</h2>
+            <div class="course">Bahasa Indonesia untuk Penulisan Ilmiah <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Bahasa Indonesia untuk Penulisan Ilmiah...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Manajemen Proyek Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Proyek Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Metode Statistik I <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Metode Statistik I...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Manajemen Proyek Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Proyek Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Praktek Jaringan Komputer <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Praktek Jaringan Komputer...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 1</p>
+            </div>
+
+            <div class="course">Sains Manajemen <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Sains Manajemen...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Sistem Operasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Sistem Operasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Tugas Pengembangan Solusi III <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Tugas Pengembangan Solusi III...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 1</p>
+            </div>
+
+            <div class="course">Pendidikan Agama <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pendidikan Agama Islam...</p>
+                <p>Deskripsi Pendidikan Agama Kristen...</p>
+                <p>Deskripsi Pendidikan Agama Katolik...</p>
+                <p>Deskripsi Pendidikan Agama Hindu...</p>
+                <p>Deskripsi Pendidikan Agama Budha...</p>
+                <p>Deskripsi Pendidikan Agama Konghuchu...</p>
+                <p>Deskripsi Pendidikan Agama Kepercayaan...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+        </div>
+
+        <!-- Semester 6 -->
+        <div class="semester">
+            <h2>Semester 6</h2>
+            <div class="course">Arsitektur Enterprise <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Arsitektur Enterprise...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">E-Business dan E-Commerce <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi E-Business dan E-Commerce...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+            <div class="course">Keamanan Komputer dan Jaringan <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Keamanan Komputer dan Jaringan...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+            <div class="course">Ketrampilan Interpersonal <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Ketrampilan Interpersonal...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+            <div class="course">Metode Penelitian Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Metode Penelitian Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+            <div class="course">Metode Statistik II <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Metode Statistik II...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+            <div class="course">Tugas Pengembangan Solusi IV <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Tugas Pengembangan Solusi IV...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+        </div>
+
+        <!-- Semester 7 -->
+        <div class="semester">
+            <h2>Semester 7</h2>
+            <div class="course">KKP <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi KKP...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Manajemen Teknologi Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Teknologi Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Rekayasa Perangkat Lunak <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Rekayasa Perangkat Lunak...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+            </div>
+
+            <div class="course">Tugas Akhir <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Tugas Akhir...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+        </div>
+
+        <!-- Semester 8 -->
+        <div class="semester">
+            <h2>Semester 8</h2>
+            <div class="course">Etika Profesi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Etika Profesi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+
+            <div class="course">Skripsi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Skripsi ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- matkul pilihan  -->
+    <h1>Deskripsi Mata Kuliah Pilihan</h1>
+    <div class="grid">
+        <!-- Semester 4 -->
+        <div class="semester">
+            <h2>Semester 4</h2>
+            <div class="course">Komunikasi Bisnis <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Komunikasi Bisnis...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <P><b>Semester:</b> 4</P>
+            </div>
+
+            <div class="course">Pemrograman Perangkat Mobile <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pemrograman Perangkat Mobile...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <P><b>Semester:</b> 4</P>
+            </div>
+
+            <div class="course">Perkenalan Komputer Grafis <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perkenalan Komputer Grafis...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+                <P><b>Semester:</b> 4</P>
+            </div>
+
+            <div class="course">Sistem Informasi Geografis <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Sistem Informasi Geografis...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <P><b>Semester:</b> 4</P>
+            </div>
+
+            <div class="course">Studi Kelayakan Bisnis <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Studi Kelayakan Bisnis ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <P><b>Semester:</b> 4</P>
+            </div>
+        </div>
+
+        <!-- Semester 5 -->
+        <div class="semester">
+            <h2>Semester 5</h2>
+            <div class="course">Dasar – Dasar Pemasaran <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Dasar – Dasar Pemasaran...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 5</p>
+            </div>
+
+            <div class="course">Interaksi Komputer dan Manusia <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Interaksi Komputer dan Manusia...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 5</p>
+            </div>
+
+            <div class="course">Manajemen Keuangan <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Keuangan...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 5</p>
+            </div>
+
+            <div class="course">Manajemen Layanan TI <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Layanan TI...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 5</p>
+            </div>
+
+            <div class="course">Manajemen SDM <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen SDM...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 5</p>
+            </div>
+
+            <div class="course">Perilaku Keorganisasian <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Perilaku Keorganisasian...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 5</p>
+            </div>
+        </div>
+
+        <!-- Semester 6 -->
+        <div class="semester">
+            <h2>Semester 6</h2>
+            <div class="course">Customer Relationship Management (CRM) <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Customer Relationship Management (CRM)...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 6</p>
+            </div>
+
+            <div class="course">Manajemen Produksi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Manajemen Produksi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 6</p>
+            </div>
+            <div class="course">Sistem Informasi Akuntansi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Sistem Informasi Akuntansi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 6</p>
+            </div>
+            <div class="course">Supply Chain Management (SCM) <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Supply Chain Management (SCM)...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 6</p>
+            </div>
+        </div>
+
+        <!-- Semester 7 -->
+        <div class="semester">
+            <h2>Semester 7</h2>
+            <div class="course">Audit Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Audit Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 7</p>
+            </div>
+
+            <div class="course">Business Intelligence <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Business Intelligence ...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 3</p>
+                <p><b>Semester:</b> 7</p>
+            </div>
+
+            <div class="course">Pengujian Sistem Informasi <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Pengujian Sistem Informasi...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+                <p><b>Semester:</b> 7</p>
+            </div>
+
+            <div class="course">Sistem Pendukung Keputusan <span class="arrow">▼</span></div>
+            <div class="content">
+                <p>Deskripsi Sistem Pendukung Keputusan...</p>
+                <p><b>Kurikulum:</b> 2025</p>
+                <p><b>Jumlah SKS:</b> 2</p>
+                <p><b>Semester:</b> 7</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+    <script>
+        const courses = document.querySelectorAll(".course");
+        courses.forEach(course => {
+            course.addEventListener("click", () => {
+                const content = course.nextElementSibling;
+                const arrow = course.querySelector(".arrow");
+
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    arrow.classList.remove("rotate");
+                } else {
+                    content.style.display = "block";
+                    arrow.classList.add("rotate");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

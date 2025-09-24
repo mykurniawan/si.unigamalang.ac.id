@@ -1,0 +1,523 @@
+<style>
+    /* General table styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        font-size: 18px;
+        text-align: center;
+        max-width: 100%;
+        /* Ensure table does not exceed container width */
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        /* Remove border from th */
+        padding: 12px;
+        word-wrap: break-word;
+        /* Allows breaking long words */
+        overflow-wrap: break-word;
+        /* Ensures that long words will break */
+        max-width: 150px;
+        /* Set a lower max width to force wrapping */
+        white-space: normal;
+        /* Allow wrapping in the cells */
+    }
+
+    /* Table header styles */
+    thead {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #ddd;
+        /* Add border to the thead */
+    }
+
+    th {
+        text-align: center;
+        border-bottom: 2px solid #ddd;
+        /* Add bottom border for separation */
+        padding: 12px;
+        /* Ensure padding is consistent */
+    }
+
+    /* Responsive table wrapper */
+    .table-container {
+        overflow-x: auto;
+        /* Allows horizontal scrolling on small screens */
+        width: 100%;
+        /* Make sure the container is full width */
+        max-width: 100%;
+        /* Prevents overflow */
+    }
+
+    /* Mobile responsive card view */
+    @media (max-width: 768px) {
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        td {
+            border: none;
+            padding: 10px;
+            position: relative;
+            padding-left: 50%;
+            text-align: left;
+            white-space: normal;
+            /* Allow wrapping in mobile view as well */
+        }
+
+        /* Label each cell with a pseudo-element */
+        td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            width: calc(50% - 20px);
+            font-weight: bold;
+            text-transform: capitalize;
+            color: #333;
+        }
+    }
+
+    /* Collapsible sections styling */
+    .day-header {
+        cursor: pointer;
+        background-color: #052AA3;
+        color: #fff;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .day-header:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<div class="container">
+    <div class="table-container">
+        <!--Senin Section-->
+        <div class="day-header" onclick="toggleDay('monday')">Senin</div>
+        <div class="hidden" id="monday">
+            <!--Add more rows for Monday here-->
+            <table>
+                <thead>
+                    <tr>
+                        <th width="50px">Jam</th>
+                        <th width="100px">Kode MK</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th width="100px">Kelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LA</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIJ0401</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Analisis Proses Bisnis</td>
+                        <td data-label="Dosen" style="text-align: left;">Gunadi, M.Sc., Ph.D.<br />Co. Maulana Abd.
+                            Rahman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIK0406</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Praktek Sistem Operasi</td>
+                        <td data-label="Dosen" style="text-align: left;">Rizki Nur Iman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">Lab.3</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIK0603</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Arsitektur Enterprise</td>
+                        <td data-label="Dosen" style="text-align: left;">Fachrudin Pakaja, S.Kom., M.T.</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0408</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Tugas Pengembangan Solusi II</td>
+                        <td data-label="Dosen" style="text-align: left;">Aan Jelli Priana, S.Kom., M.Kom.</td>
+                        <td data-label="Kelas">Lab.1</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0205</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pemrograman Berbasis Obyek</td>
+                        <td data-label="Dosen" style="text-align: left;">Resti Rahayu, S.Kom., M.M.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIK0205</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pemrograman Berbasis Obyek</td>
+                        <td data-label="Dosen" style="text-align: left;">Resti Rahayu, S.Kom., M.M.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIK0412</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Sistem Informasi Geografis</td>
+                        <td data-label="Dosen" style="text-align: left;">Aan Jelli Priana, S.Kom., M.Kom.</td>
+                        <td data-label="Kelas">RB217</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LI</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">18.00</td>
+                        <td data-label="Kode MK">TIK0406</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Praktek Sistem Operasi</td>
+                        <td data-label="Dosen" style="text-align: left;">Rizki Nur Iman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">LMS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Selasa Section-->
+        <div class="day-header" onclick="toggleDay('tuesday')">Selasa</div>
+        <div class="hidden" id="tuesday">
+            <!--Add more rows for Tuesday here-->
+            <table>
+                <thead>
+                    <tr>
+                        <th width="50px">Jam</th>
+                        <th width="100px">Kode MK</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th width="100px">Kelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LA</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIK0204</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Perkenalan Basis Data</td>
+                        <td data-label="Dosen" style="text-align: left;">Andreas Prasetia, ST., M.T.<br />Co. Resti
+                            Rahayu, S.Kom., M.M.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIK0403</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Perancangan Sistem Informasi</td>
+                        <td data-label="Dosen" style="text-align: left;">Gunadi, M.Sc., Ph.D.<br />Co. Maulana Abd.
+                            Rahman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIB0605</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Keamanan Komputer dan Jaringan</td>
+                        <td data-label="Dosen" style="text-align: left;">Fachrudin Pakaja, S.Kom., M.T. <br /> Co. Rizki
+                            Nur Iman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0201</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Konsep Sistem Informasi</td>
+                        <td data-label="Dosen" style="text-align: left;">Gunadi, M.Sc., Ph.D.<br />Co. Rizki Nur Iman,
+                            S.Kom., M.M.</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0405</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Manajemen Basis Data II</td>
+                        <td data-label="Dosen" style="text-align: left;">Gunadi, M.Sc., Ph.D.<br />Co. Resti Rahayu,
+                            S.Kom.,M.M.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIS0801</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Etika Profesi</td>
+                        <td data-label="Dosen" style="text-align: left;">Ir. S. B. P. Handhajani., M.T.<br />Co. Aan
+                            Jelli Priana, S.Kom., M.Kom.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIK0206</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Algoritma II</td>
+                        <td data-label="Dosen" style="text-align: left;">Andreas Prasetia, S.Si., M.T.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIK0602</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Metode Statistik II</td>
+                        <td data-label="Dosen" style="text-align: left;">Drs. Budiono, M.Kes.</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LI</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">18.00</td>
+                        <td data-label="Kode MK">TIM0202</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Matematika Dasar</td>
+                        <td data-label="Dosen" style="text-align: left;">Ir. S. B. P. Handhajani, M.T.</td>
+                        <td data-label="Kelas">LMS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Rabu Section-->
+        <div class="day-header" onclick="toggleDay('wednesday')">Rabu</div>
+        <div class="hidden" id="wednesday">
+            <!--Add more rows for wednesday here-->
+            <table>
+                <thead>
+
+                    <tr>
+                        <th width="50px">Jam</th>
+                        <th width="100px">Kode MK</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th width="100px">Kelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LA</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">AUU0208</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pendidikan Kewarganegaraan</td>
+                        <td data-label="Dosen" style="text-align: left;">S. Candra Hastuti, S.Si.,M.M.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIK0604</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">e-Business dan e-Commerce</td>
+                        <td data-label="Dosen" style="text-align: left;">Ir. S. B. P. Handhajani., M.T. <br /> Co. Resti
+                            Rahayu, S.Kom., M.M.</td>
+                        <td data-label="Kelas">Lab.1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIA0407</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Akuntansi II</td>
+                        <td data-label="Dosen" style="text-align: left;">Prof. Dr. Dra. Dwi Orbaningsih, M.M., Ak., CA.
+                        </td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIA0607</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Tugas Pengembangan Solusi IV</td>
+                        <td data-label="Dosen" style="text-align: left;">M, Nur Sulaiman, S.T., M.T.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIJ0207</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pengantar Manajemen</td>
+                        <td data-label="Dosen" style="text-align: left;">S. Candra Hastuti H., S.Si., M.M.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0404</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pemrograman Internet Lanjut</td>
+                        <td data-label="Dosen" style="text-align: left;">Aan Jelli Priana, S.Kom., M.Kom.</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIK0404</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pemrograman Internet Lanjut</td>
+                        <td data-label="Dosen" style="text-align: left;">Aan Jelli Priana, S.Kom., M.Kom.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIJ0609</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Sistem Informasi Akuntansi</td>
+                        <td data-label="Dosen" style="text-align: left;">Drs. Anwar Made, M.Si., Ak., CA</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LI</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">18.00</td>
+                        <td data-label="Kode MK">TIJ0401</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Analisis Proses Bisnis</td>
+                        <td data-label="Dosen" style="text-align: left;">Maulana Abd. Rahman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">LMS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Kamis Section-->
+        <div class="day-header" onclick="toggleDay('thursday')">Kamis</div>
+        <div class="hidden" id="thursday">
+            <!--Add more rows for thursday here-->
+            <table>
+                <thead>
+
+                    <tr>
+                        <th width="50px">Jam</th>
+                        <th width="100px">Kode MK</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th width="100px">Kelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LA</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIJ0411</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Dasar-Dasar Pemasaran</td>
+                        <td data-label="Dosen" style="text-align: left;">I Nyoman Susipta, S.T., M.M.</td>
+                        <td data-label="Kelas">RB.224</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIK0601</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Metode Penelitian Sistem Informasi</td>
+                        <td data-label="Dosen" style="text-align: left;">Gunadi, M.Sc., Ph.D.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0402</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Jaringan Komputer</td>
+                        <td data-label="Dosen" style="text-align: left;">Fachrudin Pakaja, S.Kom., M.T.<br /> Co. Rizki
+                            Nur Iman, S.Kom., M.M.</td>
+                        <td data-label="Kelas">Lab.1</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIK0203</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pemrograman Visual</td>
+                        <td data-label="Dosen" style="text-align: left;">Andreas Prasetia, S.Si., M.T.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr style="background-color: #dddddd;">
+                        <td data-label="Jam">10.00</td>
+                        <td data-label="Kode MK">TIJ0609</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Manajemen Produksi</td>
+                        <td data-label="Dosen" style="text-align: left;">Ir. S. B. P. Handhajani, M.T.<br /> Co. I
+                            Nyoman Susipta, S.T., M.M.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">12.00</td>
+                        <td data-label="Kode MK">TIK0203</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Pemrograman Visual</td>
+                        <td data-label="Dosen" style="text-align: left;">Andreas Prasetia, S.Si., M.T.</td>
+                        <td data-label="Kelas">Lab.2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LI</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">18.00</td>
+                        <td data-label="Kode MK">TIK0604</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">e-Business dan e-Commerce</td>
+                        <td data-label="Dosen" style="text-align: left;">Resti Rahayu, S.Kom., M.M.</td>
+                        <td data-label="Kelas">LMS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Kamis Section-->
+        <div class="day-header" onclick="toggleDay('friday')">Jumat</div>
+        <div class="hidden" id="friday">
+            <!--Add more rows for friday here-->
+            <table>
+                <thead>
+                    <tr>
+                        <th width="50px">Jam</th>
+                        <th width="100px">Kode MK</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th width="100px">Kelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LA</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">08.00</td>
+                        <td data-label="Kode MK">TIM0202</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Matematika Dasar</td>
+                        <td data-label="Dosen" style="text-align: left;">Prof. Dr. Marjono, M.Phil <br /> Ir. S. B. P.
+                            Handhajani, M.T.</td>
+                        <td data-label="Kelas">RB.217</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><b>Kelas Reguler LI</b></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Jam">18.00</td>
+                        <td data-label="Kode MK">TIB0605</td>
+                        <td data-label="Mata Kuliah" style="text-align: left;">Keamanan Komputer dan Jaringan</td>
+                        <td data-label="Dosen" style="text-align: left;">Fachrudin Pakaja, S.Kom., M.T.</td>
+                        <td data-label="Kelas">LMS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Repeat for other days (Rabu, Kamis, Jumat)-->
+    </div>
+</div>
+
+<script>
+    // Function to toggle the visibility of the day sections
+    function toggleDay(day) {
+        var element = document.getElementById(day);
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+        }
+    }
+</script>
