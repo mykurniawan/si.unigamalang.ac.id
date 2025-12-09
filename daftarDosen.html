@@ -1,325 +1,363 @@
 <style>
-    .profile-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+  .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 
+  .profile {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 48%; /* dua kolom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .profile-picture img {
+    border-radius: 5%;
+    width: 150px;
+    height: 185px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .profile-details {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #333;
+  }
+
+  p {
+    margin: 6px 0;
+    color: #555;
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a:hover h1 {
+    color: #0000ff;
+  }
+
+  /* RESPONSIVE: jika layar kecil, jadi 1 kolom */
+  @media (max-width: 768px) {
     .profile {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        width: 48%;                 /* dua kolom */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
+      width: 100%;
     }
+  }
 
-    .profile-picture img {
-        border-radius: 5%;
-        width: 150px;
-        height: 185px;
-        object-fit: cover;
-        margin-bottom: 15px;
+  /* Jika ingin gambar kiri dan teks kanan pada layar besar */
+  @media (min-width: 700px) {
+    .profile {
+      flex-direction: row;
+      align-items: flex-start;
     }
-
+    .profile-picture {
+      margin-right: 20px;
+    }
     .profile-details {
-        text-align: center;
+      text-align: left;
     }
-
-    h1 {
-        font-size: 22px;
-        margin: 0;
-        color: #333;
-    }
-
-    p {
-        margin: 6px 0;
-        color: #555;
-        font-size: 14px;
-    }
-
-    a {
-        text-decoration: none;
-    }
-    a:hover h1 {
-        color: #0000ff;
-    }
-
-    /* RESPONSIVE: jika layar kecil, jadi 1 kolom */
-    @media (max-width: 768px) {
-        .profile {
-            width: 100%;
-        }
-    }
-
-    /* Jika ingin gambar kiri dan teks kanan pada layar besar */
-    @media (min-width: 700px) {
-        .profile {
-            flex-direction: row;
-            align-items: flex-start;
-        }
-        .profile-picture {
-            margin-right: 20px;
-        }
-        .profile-details {
-            text-align: left;
-        }
-    }
+  }
 </style>
 
 <div class="profile-container">
-
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
-
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Ir. S.B.P. Handhajani, M.T.</h1>
-            </a>
-            <p><b>Email:</b> sinbad@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 Teknik Pengairan, Universitas Brawijaya</p>
-            <p>- S2 Teknik Industri, ITB</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>Manajemen Industri, Manajemen Saintifik, Sistem Manufaktur</p>
-        </div>
+  <!-- pgn  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Gunadi, M.Sc., Ph.D.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1</p>
+      <p>- S2</p>
+      <p><b>Jabatan Akademik:</b> ?</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>?</p>
+    </div>
+  </div>
+  <!-- pgn  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Gunadi, M.Sc., Ph.D.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 </p>
-            <p>- S2 </p>
-            <p><b>Jabatan Akademik:</b> ?</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+  <!-- bhnd  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Ir. S.B.P. Handhajani, M.T.</h1>
+      </a>
+      <p><b>Email:</b> sinbad@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 Teknik Pengairan, Universitas Brawijaya</p>
+      <p>- S2 Teknik Industri, ITB</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>Manajemen Industri, Manajemen Saintifik, Sistem Manufaktur</p>
+    </div>
+  </div>
+  <!-- bhnd  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Prof. Dr. Dra. Dwi Orbaningsih, M.M.,Ak.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+  <!-- pbd  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Drs. Budiono, M.Kes.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>Statistik</p>
+    </div>
+  </div>
+  <!-- pbd  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1> Resti Rahayu, S.Kom., M.M.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 Sistem Informasi, Universitas Gajayana</p>
-            <p>- S2 Magister Manajemen, Universitas Gajayana</p>
-            <p><b>Jabatan Akademik:</b> Ka Prodi</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+  <!-- pnur  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>M. Nur Sulaiman, S.T., M.T</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>Pemrograman</p>
+    </div>
+  </div>
+  <!-- pnur  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Andreas Prasetia, S.Si.,M.T.</h1>
-            </a>
-            <p><b>Email:</b>si.andre@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan:</b> Kepala PTI Uniga</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+  <!-- pand  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Andreas Prasetia, S.Si.,M.T.</h1>
+      </a>
+      <p><b>Email:</b>si.andre@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan:</b> Kepala PTI Uniga</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>?</p>
+    </div>
+  </div>
+  <!-- pand  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Rizki Nur Iman, S.Kom., M.M.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 Sistem Informasi, Universitas Gajayana</p>
-            <p>- S2 Magister Manajemen, Universitas Gajayana</p>
-            <p><b>Jabatan :</b>Kepala Lab</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>Jaringan, Hardware, Sistem Operasi</p>
-        </div>
+  <!-- bcan  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>S. Candra Hastuti, S.Si., M.M.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>?</p>
+    </div>
+  </div>
+  <!-- bcan  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Drs. Budiono, M.Kes.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>Statistik</p>
-        </div>
+  <!-- pigo  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Fachrudin Pakaja, S.Kom., M.T.</h1>
+      </a>
+      <p><b>Email:</b>fachrudinpakaja@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>?</p>
+    </div>
+  </div>
+  <!-- pigo  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Fachrudin Pakaja, S.Kom., M.T.</h1>
-            </a>
-            <p><b>Email:</b>fachrudinpakaja@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+  <!-- pny  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>I Nyoman Susipta, M.T., M.M.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>Perancangan Webpage, Pemrograman Internet</p>
+    </div>
+  </div>
+  <!-- pny  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>S. Candra Hastuti, S.Si., M.M.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+  <!-- paan  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Aan Jelli Priana, S.Kom., M.Kom.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 Magister Ilmu Komputer, Universitas Brawijaya</p>
+      <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>Perancangan Webpage, Pemrograman Internet</p>
+    </div>
+  </div>
+  <!-- paan  -->
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
-
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Aan Jelli Priana, S.Kom., M.Kom.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 Magister Ilmu Komputer, Universitas Brawijaya</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>Perancangan Webpage, Pemrograman Internet</p>
-        </div>
+  <!-- bres  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Resti Rahayu, S.Kom., M.M.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 Sistem Informasi, Universitas Gajayana</p>
+      <p>- S2 Magister Manajemen, Universitas Gajayana</p>
+      <p><b>Jabatan Akademik:</b> Ka Prodi</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>?</p>
+    </div>
+  </div>
+  <!-- bres  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>I Nyoman Susipta, M.T., M.M.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>Perancangan Webpage, Pemrograman Internet</p>
-        </div>
+  <!-- priz  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Rizki Nur Iman, S.Kom., M.M.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 Sistem Informasi, Universitas Gajayana</p>
+      <p>- S2 Magister Manajemen, Universitas Gajayana</p>
+      <p><b>Jabatan :</b>Kepala Lab</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>Jaringan, Hardware, Sistem Operasi</p>
+    </div>
+  </div>
+  <!-- priz  -->
 
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>M. Nur Sulaiman, S.T., M.T</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> Lektor Kepala</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>Pemrograman</p>
-        </div>
+  <!-- pmaul  -->
+  <div class="profile">
+    <div class="profile-picture">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png"
+        alt=""
+      />
     </div>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVKhss86lKyXVysNhAPI2ejuPxU8z2V7MLv67S2gLHj6b5XOiRSik4kFyjbv94Y1II5HnfpDGXRMXihrZNn-Y702unjAwsnf1NGc6V9j_aFduq5RehZJxm5SbqHkFqMa2SyrDgMPRWXTGKkK705GVJHnV0EulpOV-p-1Y-OGmEW4IsdFZeDykP-iq7/s1600/default_dosen.png" alt="">
-        </div>
-
-        <div class="profile-details">
-            <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
-                <h1>Maulana Abdul Rahman, S.Kom., M.M.</h1>
-            </a>
-            <p><b>Email:</b> ?@unigamalang.ac.id</p>
-            <p><b>Pendidikan:</b></p>
-            <p>- S1 ?</p>
-            <p>- S2 ?</p>
-            <p><b>Jabatan Akademik:</b> ?</p>
-            <p><b>Bidang Keahlian:</b></p>
-            <p>?</p>
-        </div>
+    <div class="profile-details">
+      <a href="https://www.si.unigamalang.ac.id/p/ir-sbp-handhajani-mt.html">
+        <h1>Maulana Abdul Rahman, S.Kom., M.M.</h1>
+      </a>
+      <p><b>Email:</b> ?@unigamalang.ac.id</p>
+      <p><b>Pendidikan:</b></p>
+      <p>- S1 ?</p>
+      <p>- S2 ?</p>
+      <p><b>Jabatan Akademik:</b> ?</p>
+      <p><b>Bidang Keahlian:</b></p>
+      <p>?</p>
     </div>
-
+  </div>
+  <!-- pmaul  -->
 </div>

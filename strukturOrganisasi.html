@@ -1,0 +1,169 @@
+<style>
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  /* Gambar lebih besar untuk Rektor & Wakil Rektor */
+.big-img {
+    width: 200px !important;
+    height: 240px !important;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+  .card {
+    background-color: #fff;
+    border: 2px solid #00a7e1;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 167, 225, 0.2);
+    padding: 15px;
+    flex-shrink: 0;
+  }
+
+  .cardII {
+    background-color: #fff;
+    border: 2px solid #00a7e1;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 167, 225, 0.2);
+    padding: 15px;
+    flex-shrink: 0;
+  }
+
+  /* --- Perbaikan Ukuran Gambar Agar Rapi --- */
+  .card img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .cardII img {
+    width: 170px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .card b, .cardII b {
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .jabatan {
+    color: #00a7e1;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  /* Responsif */
+  @media (max-width: 900px) {
+    .card {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      width: 90%;
+    }
+  }
+</style>
+
+<div class="container">
+  <!-- Rektor -->
+<div class="cardII">
+  <div class="jabatan">Rektor</div>
+  <img
+    class="big-img"
+    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIYuUvhPAne8t3okX4K8MFXKZ--6OvNsOq-Y18FuzbXYE5tyfEFKbJIoXOWLLb7c75oO24erMNjyCnS4Fh6gtIeFLGYpBj36GHQLIx1Ts4TjVOhBsY1-awbIwteauXmbpGcm5Wq2wb8vf5ifxAnDz7Lj7ZvNLrjeaFdKJSH8WOpBPPJ-mUCw4uXoQi/s2498/rektor%20oke.jpg"
+    alt="Rektor"
+  />
+  <b>Prof. Dr. Ernani Hadiyati, S.E., M.S.</b>
+</div>
+
+<!-- Wakil Rektor -->
+<div class="card-row">
+  <div class="cardII">
+    <div class="jabatan">Wakil Rektor<br>Bidang Akademik dan Umum</div>
+    <img
+      class="big-img"
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMIiqSnJvrz3hhMst8ze_HCzbAxDCS-DXLWT-fetrEG8JCq86oj1uQB-sRcoS9Piuxck_AeGbSHLvQpNHIAFBU6rWTGhKaCMCH0iLkenkQwbThuCnIVseCVINivO2X4fpVpidkpuzrHBiyLjCBMYoXKqwmGB8xDrPCT4qAPY7550r6-29NdrVAl4zs/s2498/gunadi.jpg"
+      alt="Wakil Rektor 1"
+    />
+    <b>Gunadi, M.Sc., Ph.D.</b>
+  </div>
+
+  <div class="cardII">
+    <div class="jabatan">Wakil Rektor<br>Bidang Kemahasiswaan & Kerjasama</div>
+    <img
+      class="big-img"
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUqcCb1e98bEQv7CCWLj5dQzmGlxSq7iHZ6RCJZEU435sou8jwSEnj2t3GN4xiDopydZr2rXC-_Ku49cwtFUNS3q3tnnInI5tDvVxklD8TzAdYe7zd3hL97hGCHGWMdeJEdxMr2injmoVWfO6cOsFrgIWQ-c_m17I5LN2Xm-x_G0liKymESkE_ijrV/s2500/sugeng.jpg"
+        alt="Wakil Rektor 2"
+    />
+    <b>Dr. Sugeng Mulyono, S.E., M.M.</b>
+  </div>
+</div>
+
+
+  <!-- Kepala Lembaga -->
+  <div class="card-row">
+    <div class="card">
+      <div class="jabatan">Kepala BP3M</div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4PT9kq4cIj_SiD6WPfkDK11EU7pa_iPAxDHN1ifmgSLG14ys9tm68ZnpfJjpTJKs_lU9EnnHJSk3Jq4tb4IUvngIy2beLry-Y-PhxJS_aoWEEeFpE2B-RC3xBIK-DjaS1UJNhkDn5gaFhBv9LJFGoYxXZOK_lAkr0KwbN1lB7lJKKcnlpWj_0GzSLFzdH/s16000/userblank.png"
+        alt="Kepala BP3M"
+      />
+      <b>Dr. Umi Muawanah, S.E., M.Si., A.K.</b>
+    </div>
+
+    <div class="card">
+      <div class="jabatan">Kepala LPPM</div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4PT9kq4cIj_SiD6WPfkDK11EU7pa_iPAxDHN1ifmgSLG14ys9tm68ZnpfJjpTJKs_lU9EnnHJSk3Jq4tb4IUvngIy2beLry-Y-PhxJS_aoWEEeFpE2B-RC3xBIK-DjaS1UJNhkDn5gaFhBv9LJFGoYxXZOK_lAkr0KwbN1lB7lJKKcnlpWj_0GzSLFzdH/s16000/userblank.png"
+        alt="Kepala LPPM"
+      />
+      <b>Ferdian Hendrasto, S.E., M.M.</b>
+    </div>
+
+    <div class="card">
+      <div class="jabatan">Kepala BAU</div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2yF6YZTn3DHv69diXXK8hTOpkoPuxjMsVo35StEkBEOCWeY1Lxt0V2CR-eKQjqfVThWZNzJDJAkaxfetxPGROqDky05A4GBkGl-loNJQIV7DNzt4G43cm6dBx-hgXAY8cI9O0gi5802fjxLsfArIJS4_Mv78BohLRJ1cLZGfAf_RSBpUjNyhAWXt6/s2500/mulyono.jpg"
+        alt="Kepala BAU"
+      />
+      <b>Mulyono, S.E.</b>
+    </div>
+
+    <div class="card">
+      <div class="jabatan">Kepala BAAk</div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4PT9kq4cIj_SiD6WPfkDK11EU7pa_iPAxDHN1ifmgSLG14ys9tm68ZnpfJjpTJKs_lU9EnnHJSk3Jq4tb4IUvngIy2beLry-Y-PhxJS_aoWEEeFpE2B-RC3xBIK-DjaS1UJNhkDn5gaFhBv9LJFGoYxXZOK_lAkr0KwbN1lB7lJKKcnlpWj_0GzSLFzdH/s16000/userblank.png"
+        alt="Kepala BAAk"
+      />
+      <b>I Nyoman Susipta, S.T., M.M.</b>
+    </div>
+  </div>
+</div>
